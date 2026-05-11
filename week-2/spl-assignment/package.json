@@ -1,0 +1,33 @@
+{
+  "name": "spl-assignment",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spl:init": "bun spl_init.ts",
+    "spl:metadata": "bun spl_metadata.ts",
+    "spl:mint": "bun spl_mint.ts",
+    "spl:transfer": "bun spl_transfer.ts",
+    "nft:image": "bun nft_image.ts",
+    "nft:metadata": "bun nft_metadata.ts",
+    "nft:mint": "bun nft_mint.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi": "^1.5.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.5.1",
+    "@metaplex-foundation/umi-uploader-irys": "^1.5.0",
+    "@solana-program/token": "^0.13.0",
+    "@solana/kit": "^6.9.0",
+    "@solana/kit-plugin-rpc": "^0.11.1",
+    "@solana/kit-plugin-signer": "^0.10.0",
+    "bs58": "^6.0.0"
+  }
+}
