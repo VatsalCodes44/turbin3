@@ -23,6 +23,35 @@ umi.use(
   try {
     const image =
       "https://gateway.irys.xyz/5faJJtXXWjPrypwWZovKEJR9AvQvu16jPuYaLsa2EZAf";
+
+    const metadata = {
+      name: "Iron Throne",
+      description: "The Iron Throne",
+      image: image,
+      attributes: [
+        {
+          trait_type: "rarity",
+          value: "legendary",
+        },
+        {
+          trait_type: "power",
+          value: "100",
+        },
+      ],
+      properties: {
+        files: [
+          {
+            type: "image/png",
+            uri: image,
+          },
+        ],
+        category: "image",
+      },
+    };
+
+    const myUri = await umi.uploader.uploadJson(metadata);
+
+    console.log("Metadata uploaded to Irys! URI:", myUri);
   } catch (error) {
     console.error("Error:", error);
   }
